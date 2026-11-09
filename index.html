@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Reflejo · Shongo</title>
+    <meta name="description" content="Convierte tu cámara y tus imágenes en partículas, en tiempo real y sin que nada salga de tu dispositivo." />
+    <meta name="theme-color" content="#060607" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ff6b5e'/%3E%3Ctext x='16' y='24' font-family='Arial Black,sans-serif' font-weight='900' font-size='22' text-anchor='middle' fill='%23060607'%3ES%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <canvas id="stage" aria-hidden="true"></canvas>
+
+    <header class="top">
+      <h1 class="brand">Shongo <span>Reflejo</span></h1>
+      <p class="hud" id="hud" aria-hidden="true"></p>
+    </header>
+
+    <section class="panel" id="panel" aria-label="Ajustes" hidden>
+      <label class="field">
+        <span>Densidad <output id="count-out"></output></span>
+        <input id="count" type="range" step="1000" />
+      </label>
+      <label class="field">
+        <span>Tamaño <output id="size-out"></output></span>
+        <input id="size" type="range" min="0.4" max="2.5" step="0.05" value="1" />
+      </label>
+      <label class="field">
+        <span>Relieve <output id="relief-out"></output></span>
+        <input id="relief" type="range" min="0" max="2.5" step="0.05" value="0.5" />
+      </label>
+      <label class="field">
+        <span>Suavizado <output id="smoothing-out"></output></span>
+        <input id="smoothing" type="range" min="0" max="0.92" step="0.02" value="0.5" />
+      </label>
+      <label class="field">
+        <span>Dispersión <output id="scatter-out"></output></span>
+        <input id="scatter" type="range" min="0" max="1.5" step="0.05" value="0.5" />
+      </label>
+    </section>
+
+    <nav class="dock" aria-label="Controles">
+      <button class="btn btn-main" id="camera" type="button" aria-pressed="false">Activar cámara</button>
+      <button class="btn" id="flip" type="button" hidden>Cambiar cámara</button>
+      <label class="btn" for="file">Cargar imagen</label>
+      <input class="sr" id="file" type="file" accept="image/*" multiple />
+      <ul class="thumbs" id="thumbs" aria-label="Imágenes cargadas"></ul>
+      <span class="gap"></span>
+      <button class="btn" id="save" type="button">Guardar PNG</button>
+      <button class="btn" id="settings" type="button" aria-expanded="false" aria-controls="panel">Ajustes</button>
+    </nav>
+
+    <p class="toast" id="toast" role="status" hidden></p>
+    <div class="drop" id="drop" aria-hidden="true" hidden><p>Suelta la imagen</p></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
