@@ -10,6 +10,8 @@ Tu cámara y tus imágenes convertidas en **una nube de hasta 500.000 partícula
 ![TypeScript](https://img.shields.io/badge/TypeScript-7-3178c6?logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)
 
+[![La palabra reflejo escrita con partículas sobre fondo negro, con el lema «tu imagen, en partículas».](docs/screenshots/hero.jpg)](https://jhonedinson-shongo.github.io/shongo-reflejo/)
+
 ## Cómo se usa
 
 Al abrir, las partículas se juntan para escribir **reflejo**. Desde ahí:
