@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jhonedinson-shongo.github.io/shongo-reflejo/sitemap.xml
